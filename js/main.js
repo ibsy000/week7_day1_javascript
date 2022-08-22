@@ -355,3 +355,123 @@ console.log(5 != '5') // false
 console.log(5 !== '5') // true
 
 console.clear()
+
+
+// CONTROL FLOW
+// if (condition expression){code to execute if true}
+
+let newNumber = 10
+console.log('Begin')
+if (newNumber > 65){
+    console.log('Senior')
+} else if (newNumber > 18){ // equalivent to elif in Python
+    console.log('Adult')
+} else {
+    console.log('Child')
+}
+console.log('End')
+
+
+// Ternary Operator -- Popular in JavaScript-- (condition) ? value if true : value if false
+// age_ group = 'Adult' if age > 18 else 'Child'
+
+let ageGroup = (newNumber > 18) ? 'Adult' : 'Child'
+console.log(ageGroup)
+
+
+// PYTHON: age_group_2 = 'Senior' if agae > 65 else 'Adult' if age > 18 else 'Child'
+let ageGroup2 = (newNumber > 65) ? 'Senior' : (newNumber > 18) ? 'Adult' : 'Child'
+console.log(ageGroup2)
+
+
+// && -- and in Python
+// || -- or in Python
+newNumber = 10
+if (newNumber > 18 && newNumber < 40){
+    console.log('Young Adult')
+}
+
+if (newNumber < 18 || newNumber > 65){
+    console.log('You get a discount!')
+}
+
+
+console.clear()
+
+
+/* 
+    JavaScript Loops
+    5 loops: for, for...in, for...of, while, do while
+*/
+
+// Standard 'for' loop
+// for (counter; expression/condition; increment/decrement for counter){code to execute each loop}
+console.log('Loop has started')
+
+for (let i = 0; i <= 20; i++){
+    console.log(i)
+}
+
+console.log('Loop has ended')
+
+
+let colors = ['red', 'green', 'purple', 'pink']
+
+for(let i = 0; i < colors.length; i++){
+    console.log(i, colors[i])
+}
+
+
+// for...in -- used to loop over the properties of an Object
+let teams = {
+    mlb: 'White Sox',
+    nba: 'Bulls',
+    nfl: 'Bears',
+    nhl: 'Blackhawks'
+}
+
+
+// for (let variable in obj){code to execute for each property in object}
+for (let t in teams){ // block- scoped
+    console.log(t)
+    console.log(teams[t])
+}
+
+// console.log(t) -- gets an error
+
+// for...of used to loop over the elements in an Array
+let planets = ['Mercury', 'Mars', 'Earth', 'Venus', 'Jupiter']
+
+for (let p of planets){ // if you did a for...in you would get 0, 1, 2, 3, 4
+    console.log(p)
+}
+
+// every Array is an Object, but not every Object is an Array
+
+
+// While loop
+// while (condition){code to execute while condition is true}
+let num1 = 1
+while (num1 < 10){
+    console.log(num1)
+    num1++
+}
+
+
+// Do While Loop... DO the first portion AT LEAST ONCE
+// If the while condition is stil true, continue the while loop
+
+// do {code to execute} while (condition)
+let k = 100
+
+do {
+    k *= 2;
+    console.log(k);
+} while (k < 10);
+
+
+// do {
+//     var firstName = prompt('What is your name?')
+// } while (firstName !== 'Brian') // will continue to ask until input == 'Brian'
+// comment out because it will prompt everytime a change is made
+
